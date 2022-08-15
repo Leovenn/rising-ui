@@ -26,5 +26,6 @@
     "vite-plugin-dts": "^1.4.1",
     "vue": "^3.2.37",
     "vue-tsc": "^0.38.4"
-  }
+  },
+  "type": "module"
 }
