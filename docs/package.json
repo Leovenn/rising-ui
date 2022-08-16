@@ -7,6 +7,10 @@
     "serve": "vitepress serve"
   },
   "devDependencies": {
+    "@algolia/client-search": "^4.9.1",
+    "@types/react": "16.8.0",
+    "react": "16.8.0",
+    "react-dom": "16.8.0",
     "vitepress": "^1.0.0-alpha.4"
   }
 }

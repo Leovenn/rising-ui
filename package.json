@@ -13,11 +13,11 @@
   "license": "MIT",
   "dependencies": {
     "@sage-ui/components": "workspace:^1.0.0",
+    "@sage-ui/constants": "workspace:^1.0.0",
+    "@sage-ui/sage-ui": "workspace:^0.0.1",
     "@sage-ui/utils": "workspace:^1.0.0"
   },
   "devDependencies": {
-    "@sage-ui/constants": "workspace:^1.0.0",
-    "@sage-ui/sage-ui": "workspace:^0.0.1",
     "@types/node": "^18.6.5",
     "@vitejs/plugin-vue": "^3.0.0",
     "@vue/tsconfig": "^0.1.3",
