@@ -1,7 +1,7 @@
 import { withInstall } from '@sage-ui/utils'
 import Button from './src/button.vue'
-const SageButton = withInstall(Button)
+const RButton = withInstall(Button, 'RButton')
 
-export { SageButton }
+export { RButton }
 
-export default SageButton
+export default RButton

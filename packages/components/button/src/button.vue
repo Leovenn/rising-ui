@@ -1,9 +1,6 @@
 <template>
   <div>123</div>
 </template>
-
-<script setup lang="ts">
-defineOptions({ name: 'RButton' })
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

@@ -1,7 +1,7 @@
 // .vitepress/theme/index.js
 
 import DefaultTheme from 'vitepress/theme'
-import sageui from '@sage-ui/sage-ui'
+import sageui from '../../../sage-ui/es/sage-ui'
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app, router, siteData, isServer }) => {

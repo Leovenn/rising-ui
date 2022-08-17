@@ -58,7 +58,7 @@ export default defineConfig((configEnv) => {
       minify: false,
       rollupOptions: {
         external: ['vue'],
-        input: ['packages/index.ts'],
+        input: ['packages/sage-ui/index.ts'],
         output: [
           {
             format: 'es',
@@ -82,7 +82,7 @@ export default defineConfig((configEnv) => {
         ],
       },
       lib: {
-        entry: './packages/index.ts',
+        entry: './packages/sage-ui/index.ts',
         formats: ['es', 'cjs'],
       },
     },
