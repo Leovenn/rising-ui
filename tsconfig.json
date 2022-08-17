@@ -11,6 +11,8 @@
     "packages/components/**/*.ts",
     "packages/components/**/*.vue",
     "packages/utils/**/*.ts",
+    "packages/constants/**/*.ts",
+    "packages/rising-ui/**/*.ts",
     "vite.config.ts",
     "typings/*.d.ts"
   ],

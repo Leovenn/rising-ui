@@ -28,10 +28,23 @@ export default defineConfig((configEnv) => {
       dts({
         outputDir: resolve(__dirname, 'rising-ui/es'),
         tsConfigFilePath: './tsconfig.json',
+        /** 处理生成的类型文件 目录不对应 */
+        beforeWriteFile: (filepath, content) => {
+          return {
+            filePath: filepath.replace('packages', ''),
+            content,
+          }
+        },
       }),
       dts({
         outputDir: resolve(__dirname, 'rising-ui/lib'),
         tsConfigFilePath: './tsconfig.json',
+        beforeWriteFile: (filepath, content) => {
+          return {
+            filePath: filepath.replace('packages', ''),
+            content,
+          }
+        },
       }),
       VueMacros(),
     ],
@@ -46,30 +59,31 @@ export default defineConfig((configEnv) => {
     /**配置生产环境 */
     build: {
       //   minify: 'terser',
-      //   terserOptions: {
-      //     compress: {
-      //       drop_console: true,
-      //       drop_debugger: true,
-      //     },
-      //   },
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
       //   outDir: 'mobile',
       target: 'modules',
-      outDir: resolve(__dirname, 'rising-ui/es'),
+      // outDir: resolve(__dirname, 'rising-ui/es'),
       minify: false,
       rollupOptions: {
         external: ['vue'],
         input: ['packages/rising-ui/index.ts'],
+        preserveEntrySignatures: 'strict',
         output: [
           {
             format: 'es',
-            entryFileNames: '[name].js',
+            entryFileNames: '[name].mjs',
             preserveModules: true,
             dir: resolve(__dirname, 'rising-ui/es'),
             preserveModulesRoot: 'src',
           },
           {
             format: 'cjs',
-            entryFileNames: '[name].js',
+            entryFileNames: '[name].cjs',
             preserveModules: true,
             dir: resolve(__dirname, 'rising-ui/lib'),
             preserveModulesRoot: 'src',
@@ -81,10 +95,10 @@ export default defineConfig((configEnv) => {
           },
         ],
       },
-      lib: {
-        entry: './packages/rising-ui/index.ts',
-        formats: ['es', 'cjs'],
-      },
+      // lib: {
+      //   entry: 'packages/rising-ui/index.ts',
+      //   formats: [],
+      // },
     },
   }
 })

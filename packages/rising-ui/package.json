@@ -16,8 +16,8 @@
   ],
   "exports": {
     ".": {
-      "require": "./lib/index.js",
-      "import": "./es/index.js"
+      "require": "./lib/index.cjs",
+      "import": "./es/index.mjs"
     }
   },
   "peerDependencies": {

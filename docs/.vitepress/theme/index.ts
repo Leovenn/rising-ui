@@ -1,7 +1,7 @@
 // .vitepress/theme/index.js
 
 import DefaultTheme from 'vitepress/theme'
-import sageui from '../../../sage-ui/es/sage-ui'
+import { RButton } from '@rising-ui/rising-ui'
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app, router, siteData, isServer }) => {
@@ -13,6 +13,6 @@ export default {
     //   app.use(module)
     // })
 
-    app.use(sageui)
+    app.use(RButton)
   },
 }
