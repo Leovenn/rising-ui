@@ -1,5 +1,5 @@
 import type { App, Plugin } from '@vue/runtime-core'
-import { INSTALLED_KEY } from '@sage-ui/constants'
+import { INSTALLED_KEY } from '@rising-ui/constants'
 export const makeInstaller = (components: Plugin[] = []) => {
   const install = (app: App) => {
     if (app[INSTALLED_KEY]) return

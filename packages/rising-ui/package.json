@@ -1,14 +1,14 @@
 {
-  "name": "@sage-ui/sage-ui",
+  "name": "@rising-ui/rising-ui",
   "version": "0.0.1",
   "description": "一个精致的vue3组件库",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "index.ts",
+  "module": "index.ts",
   "author": "leovenn",
   "license": "MIT",
   "keywords": [
     "vue3组件库",
-    "sage-ui",
+    "rising-ui",
     "组件库",
     "component library",
     "vue",

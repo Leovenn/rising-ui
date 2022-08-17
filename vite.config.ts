@@ -26,11 +26,11 @@ export default defineConfig((configEnv) => {
     plugins: [
       vue(),
       dts({
-        outputDir: resolve(__dirname, 'sage-ui/es'),
+        outputDir: resolve(__dirname, 'rising-ui/es'),
         tsConfigFilePath: './tsconfig.json',
       }),
       dts({
-        outputDir: resolve(__dirname, 'sage-ui/lib'),
+        outputDir: resolve(__dirname, 'rising-ui/lib'),
         tsConfigFilePath: './tsconfig.json',
       }),
       VueMacros(),
@@ -54,24 +54,24 @@ export default defineConfig((configEnv) => {
       //   },
       //   outDir: 'mobile',
       target: 'modules',
-      outDir: resolve(__dirname, 'sage-ui/es'),
+      outDir: resolve(__dirname, 'rising-ui/es'),
       minify: false,
       rollupOptions: {
         external: ['vue'],
-        input: ['packages/sage-ui/index.ts'],
+        input: ['packages/rising-ui/index.ts'],
         output: [
           {
             format: 'es',
             entryFileNames: '[name].js',
             preserveModules: true,
-            dir: resolve(__dirname, 'sage-ui/es'),
+            dir: resolve(__dirname, 'rising-ui/es'),
             preserveModulesRoot: 'src',
           },
           {
             format: 'cjs',
             entryFileNames: '[name].js',
             preserveModules: true,
-            dir: resolve(__dirname, 'sage-ui/lib'),
+            dir: resolve(__dirname, 'rising-ui/lib'),
             preserveModulesRoot: 'src',
           },
           {
@@ -82,7 +82,7 @@ export default defineConfig((configEnv) => {
         ],
       },
       lib: {
-        entry: './packages/sage-ui/index.ts',
+        entry: './packages/rising-ui/index.ts',
         formats: ['es', 'cjs'],
       },
     },
