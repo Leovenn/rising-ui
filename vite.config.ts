@@ -79,14 +79,14 @@ export default defineConfig((configEnv) => {
             entryFileNames: '[name].mjs',
             preserveModules: true,
             dir: resolve(__dirname, 'rising-ui/es'),
-            preserveModulesRoot: 'src',
+            preserveModulesRoot: 'rising-ui',
           },
           {
             format: 'cjs',
             entryFileNames: '[name].cjs',
             preserveModules: true,
             dir: resolve(__dirname, 'rising-ui/lib'),
-            preserveModulesRoot: 'src',
+            preserveModulesRoot: 'rising-ui',
           },
           {
             global: {

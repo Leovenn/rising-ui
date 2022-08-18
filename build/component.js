@@ -31,3 +31,24 @@ const removeDir = (dir) => {
 }
 
 removeDir(path.join(__dirname, '../dist'))
+
+const copyRisingUi = (e) => {
+  e.forEach((item) => {
+    const myPath = path.join(__dirname, `../rising-ui/${item}/rising-ui/`)
+    const targetPath = path.join(__dirname, `../rising-ui/${item}/`)
+    fs.readdir(myPath, (err, files) => {
+      if (err) {
+        console.log(err)
+      } else {
+        files.forEach((filePath) => {
+          // fs.cp(myPath + filePath, targetPath + filePath, () => {})
+          fs.writeFileSync(targetPath + filePath, fs.readFileSync(myPath + filePath))
+        })
+        console.log(myPath)
+        removeDir(myPath)
+      }
+    })
+  })
+}
+copyRisingUi(['es', 'lib'])
+// console.log(JSON.parse(fs.readFileSync('package.json', 'utf8')))
