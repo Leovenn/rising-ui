@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "build:c": "vite build & node ./build/component.js",
+    "build:c": "node ./build/clean.js && vite build && node ./build/component.js",
     "preview": "vite preview"
   },
   "author": "leoven",
