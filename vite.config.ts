@@ -26,7 +26,7 @@ export default defineConfig((configEnv) => {
     plugins: [
       vue(),
       dts({
-        outputDir: resolve(__dirname, 'rising-ui/es'),
+        outputDir: resolve(__dirname, 'dist/es'),
         tsConfigFilePath: './tsconfig.json',
         /** 处理生成的类型文件 目录不对应 */
         beforeWriteFile: (filepath, content) => {
@@ -37,7 +37,7 @@ export default defineConfig((configEnv) => {
         },
       }),
       dts({
-        outputDir: resolve(__dirname, 'rising-ui/lib'),
+        outputDir: resolve(__dirname, 'dist/lib'),
         tsConfigFilePath: './tsconfig.json',
         beforeWriteFile: (filepath, content) => {
           return {
@@ -78,15 +78,15 @@ export default defineConfig((configEnv) => {
             format: 'es',
             entryFileNames: '[name].mjs',
             preserveModules: true,
-            dir: resolve(__dirname, 'rising-ui/es'),
-            preserveModulesRoot: 'rising-ui',
+            dir: resolve(__dirname, 'dist/es'),
+            preserveModulesRoot: 'dist',
           },
           {
             format: 'cjs',
             entryFileNames: '[name].cjs',
             preserveModules: true,
-            dir: resolve(__dirname, 'rising-ui/lib'),
-            preserveModulesRoot: 'rising-ui',
+            dir: resolve(__dirname, 'dist/lib'),
+            preserveModulesRoot: 'dist',
           },
           {
             global: {

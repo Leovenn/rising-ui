@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "build:c": "node ./build/clean.js && vite build && node ./build/component.js",
+    "build:vite": "vue-tsc --noEmit && vite build",
+    "build": "node ./build/clean && vite build && node ./build",
+    "build:pub": "pnpm run build && node ./build/publish",
     "preview": "vite preview"
   },
   "author": "leoven",
@@ -26,5 +27,8 @@
     "vue": "^3.2.37",
     "vue-tsc": "^0.38.4"
   },
-  "type": "module"
+  "type": "module",
+  "files": [
+    "dist"
+  ]
 }
