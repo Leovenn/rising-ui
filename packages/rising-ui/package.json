@@ -1,9 +1,10 @@
 {
     "name": "@rising-ui/rising-ui",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "一个精致的vue3组件库",
     "main": "index.ts",
     "module": "index.ts",
+    "types": "es/index.d.ts",
     "author": "leovenn",
     "license": "MIT",
     "keywords": [
@@ -20,7 +21,14 @@
             "import": "./es/index.mjs"
         }
     },
-    "types": "es/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Leovenn/rising-ui.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Leovenn/rising-ui/issues"
+    },
+    "homepage": "",
     "peerDependencies": {
         "vue": "^3.2.37"
     },

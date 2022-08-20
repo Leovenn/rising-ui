@@ -35,6 +35,7 @@ export default defineConfig((configEnv) => {
             content,
           }
         },
+        // staticImport: true,
       }),
       dts({
         outputDir: resolve(__dirname, 'dist/lib'),
@@ -50,11 +51,11 @@ export default defineConfig((configEnv) => {
     ],
 
     /**配置别名 */
-    // resolve: {
-    //   alias: {
-    //     '@': path.resolve(__dirname, 'src'),
-    //   },
-    // },
+    resolve: {
+      alias: {
+        '@rising-ui/': resolve(__dirname, 'packages/'),
+      },
+    },
 
     /**配置生产环境 */
     build: {

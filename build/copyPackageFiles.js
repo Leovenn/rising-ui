@@ -13,7 +13,13 @@ export const copyPackageFiles = (e) => {
     fs.readdir(myPath, (err, files) => {
       if (err) console.log(err)
       else {
-        files.forEach((fileName) => fs.writeFileSync(targetPath + fileName, fs.readFileSync(myPath + fileName, 'utf-8')))
+        files.forEach((fileName) => {
+          /**
+           * 替换路径
+           */
+          let source = fs.readFileSync(myPath + fileName, 'utf-8').replaceAll('../', './')
+          fs.writeFileSync(targetPath + fileName, source, 'utf-8')
+        })
         removeDir(myPath)
       }
     })

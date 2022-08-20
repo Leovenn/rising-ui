@@ -5,20 +5,19 @@
       "vite/client",
       "node",
       "unplugin-vue-macros/macros-global"
-    ]
+    ],
+    "paths": {},
+    "baseUrl": "."
   },
   "include": [
-    "packages/components/**/*.ts",
-    "packages/components/**/*.vue",
-    "packages/utils/**/*.ts",
-    "packages/constants/**/*.ts",
-    "packages/rising-ui/**/*.ts",
+    "packages/**/*.ts",
+    "packages/**/*.vue",
     "vite.config.ts",
     "typings/*.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "rising-ui/**"
+    "./dist"
   ],
 }
 // {

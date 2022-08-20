@@ -17,7 +17,7 @@ export const initPkgVersion = () => {
   /**
    * 将修改的packa.json 拷贝到dist 目录下
    */
-  fs.writeFileSync(pro_path_pkg, JSON.stringify(pkgContentProOld))
+  fs.writeFileSync(pro_path_pkg, JSON.stringify(pkgContentProOld), 'utf8')
 
   /**
    * 执行命令 增加版本号 增加版本号
@@ -29,11 +29,11 @@ export const initPkgVersion = () => {
    */
   let hasScript = JSON.parse(fs.readFileSync(pro_path_pkg, 'utf8'))
   if ('scripts' in hasScript) delete hasScript['scripts']
-  fs.writeFileSync(pro_path_pkg, JSON.stringify(hasScript))
+  fs.writeFileSync(pro_path_pkg, JSON.stringify(hasScript), 'utf8')
 
   /**
    * 修改  packages下rising-ui 下的packa.json 的版本号 并写入
    */
   pkgContentSourceOld['version'] = hasScript['version']
-  fs.writeFileSync(source_path_pkg, JSON.stringify(pkgContentSourceOld))
+  fs.writeFileSync(source_path_pkg, JSON.stringify(pkgContentSourceOld), 'utf8')
 }
