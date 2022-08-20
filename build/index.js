@@ -1,5 +1,5 @@
 import { removeDir } from './remove.js'
-import { initPkg } from './initPkg.js'
+import { initPkg, initReadme } from './init.js'
 import { copyPackageFiles } from './copyPackageFiles.js'
 import { pro_path_assets } from './constant.js'
 
@@ -10,6 +10,10 @@ copyPackageFiles(['es', 'lib'])
  */
 initPkg()
 
+/**
+ * 拷贝README 文档
+ */
+initReadme()
 /**
  * 移除dist/assets
  */

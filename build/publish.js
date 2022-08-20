@@ -9,4 +9,4 @@ initPkgVersion()
 /**
  * 执行发布命令
  */
-execSync('pnpm publish', { stdio: 'inherit' })
+// execSync('pnpm publish', { stdio: 'inherit' })
