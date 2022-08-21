@@ -7,12 +7,12 @@ export const initPkg = () => {
 
   pkgContent['name'] = 'rising-ui'
   pkgContent['main'] = 'lib/index.cjs'
-  pkgContent['module'] = 'es/index.m.js'
+  pkgContent['module'] = 'es/index.mjs'
 
   /**
    * 将修改的packa.json 拷贝到dist 目录下
    */
-  fs.writeFileSync(pro_path_pkg, JSON.stringify(pkgContent))
+  fs.writeFileSync(pro_path_pkg, JSON.stringify(pkgContent), 'utf8')
 }
 
 export const initReadme = () => fs.writeFileSync(pro_path + '/README.md', fs.readFileSync(readme_path, 'utf8'))
