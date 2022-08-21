@@ -1,13 +1,19 @@
 import { defineConfig } from 'vitepress'
 export default defineConfig({
+  title: 'Rising UI',
+  // description: 'hello world',
+  base: './',
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo_head.svg' }]],
+  // lastUpdated: true,
   themeConfig: {
-    siteTitle: false,
-    logo: '/logo.png',
+    siteTitle: 'Rising UI',
+    logo: '/logo_head.svg',
+
     nav: [
       { text: '指南', link: '/guide/install' },
       { text: '组件', link: '/examples/button/' },
     ],
-    socialLinks: [{ icon: 'github', link: 'https://gitee.com/geeksdidi' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/Leovenn' }],
     sidebar: {
       '/guide/': [
         {

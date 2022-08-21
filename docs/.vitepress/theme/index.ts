@@ -12,7 +12,8 @@ export default {
     //   console.log(module)
     //   app.use(module)
     // })
-
-    app.use(RButton)
+    // console.log(RButton)
+    // app.use('RButton', RButton)
+    app.component('RButton', RButton)
   },
 }

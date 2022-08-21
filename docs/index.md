@@ -1,32 +1,32 @@
 ---
 layout: home
 
-title: Sage-Ui
+title: Rising UI
 titleTemplate: 一个Vue3组件库
 
 hero:
-  name: Sage-Ui
+  name: Rising UI
   text: 一个Vue3组件库
-  # tagline: 没啥特点仅供学习
+  tagline: 简约、有点好看
   image:
-    src: /logo.png
-    alt: Sage-Ui
+    src: /logo.svg
+    alt: RisingUi
   actions:
     - theme: brand
       text: 开始
       link: ./guide/install
     - theme: alt
-      text: 在 Gitee 上查看
-      link: https://gitee.com/geeksdidi/kittyui
+      text: 在 Github 上查看
+      link: https://github.com/Leovenn/rising-ui
 
 features:
   - icon: 💡
-    title: Vue3组件库
-    details: 基于vite打包和TypeScript开发
+    title: TypeScript
+    details: 全量使用TypeScript编写、无缝衔接你的TypeScript项目
   - icon: 📦
-    title: 仅供学习使用
-    details: 倾向于Vue3组件库的学习，请勿用于实际生产项目
+    title: Vue3组件
+    details: 全部TreeShaking、按需引入、无需配置任何插件
   - icon: 🛠️
-    title: 按需引入
-    details: 直接支持按需引入无需配置任何插件。
+    title: 未来
+    details: 刚刚开始、路还长
 ---

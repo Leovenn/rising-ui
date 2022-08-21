@@ -13,7 +13,7 @@
   "dependencies": {
     "@rising-ui/components": "workspace:^1.0.0",
     "@rising-ui/constants": "workspace:^1.0.0",
-    "@rising-ui/rising-ui": "workspace:^0.0.1",
+    "@rising-ui/rising-ui": "workspace:^0.0.4",
     "@rising-ui/utils": "workspace:^1.0.0"
   },
   "devDependencies": {

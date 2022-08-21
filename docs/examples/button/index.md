@@ -23,16 +23,16 @@
 使用 type、plain、round 和 circle 来定义按钮的样式。
 
 <div class="example">
-   <s-button />
+   <r-button />
 </div>
 
 <details>
 <summary>展开查看</summary>
 
 ```vue
-<template><SageButton /></template>
+<template><r-button /></template>
 <script lang="ts" setup>
-import { SageButton } from '@sage-ui/components'
+import { RButton } from 'rising-ui'
 </script>
 ```
 
