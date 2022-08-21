@@ -1,7 +1,7 @@
 {
     "name": "@rising-ui/rising-ui",
     "version": "0.0.4",
-    "description": "一个精致的vue3组件库",
+    "description": "一个简约的vue3组件库",
     "main": "index.ts",
     "module": "index.ts",
     "types": "es/index.d.ts",
@@ -28,7 +28,7 @@
     "bugs": {
         "url": "https://github.com/Leovenn/rising-ui/issues"
     },
-    "homepage": "",
+    "homepage": "https://leovenn.github.io/rising-ui/docs/preview/",
     "peerDependencies": {
         "vue": "^3.2.37"
     },
