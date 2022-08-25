@@ -19,7 +19,7 @@
   },
   "author": "leoven",
   "license": "MIT",
-  "homepage": "https://leovenn.github.io/rising-ui/docs/preview/",
+  "homepage": "https://leovenn.github.io/rising-ui-docs",
   "dependencies": {
     "@rising-ui/components": "workspace:^1.0.0",
     "@rising-ui/constants": "workspace:^1.0.0",

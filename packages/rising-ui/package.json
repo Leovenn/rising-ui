@@ -28,7 +28,7 @@
     "bugs": {
         "url": "https://github.com/Leovenn/rising-ui/issues"
     },
-    "homepage": "https://leovenn.github.io/rising-ui/docs/preview/",
+    "homepage": "https://leovenn.github.io/rising-ui-docs",
     "peerDependencies": {
         "vue": "^3.2.37"
     },
