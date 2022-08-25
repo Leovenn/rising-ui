@@ -14,7 +14,7 @@ export default defineConfig({
       { text: '指南', link: '/guide/install' },
       { text: '组件', link: '/examples/button/' },
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/Leovenn' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/Leovenn/rising-ui' }],
     sidebar: {
       '/guide/': [
         {
