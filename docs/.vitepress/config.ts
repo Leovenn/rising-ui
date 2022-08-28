@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Rising UI',
   // description: 'hello world',
-  base: '/rising-ui-docs',
   // base: '/rising-ui-docs',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo_head.svg' }]],
   // lastUpdated: true,
