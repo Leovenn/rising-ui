@@ -39,6 +39,17 @@ export default defineConfig({
           ],
         },
       ],
+      '/examples/': [
+        {
+          text: '基础组件',
+          items: [
+            {
+              text: 'button 按钮',
+              link: '/examples/button/',
+            },
+          ],
+        },
+      ],
     },
   },
 })

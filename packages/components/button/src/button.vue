@@ -1,17 +1,27 @@
 <template>
-  <button class="r-button">default</button>
-  <button class="r-button r-button--primary r-button--small">default</button>
-  <button class="r-button r-button--success r-button--large">default</button>
-  <button class="r-button r-button--warning">default</button>
-  <button class="r-button r-button--error">default</button>
-  <button class="r-button r-button--info">default</button>
+  <button :class="className">
+    <slot />
+  </button>
 </template>
 <script setup lang="ts">
-// defineOptions({ name: 'RButton' })
-</script>
-
-<style scoped>
-button {
-  margin-right: 10px;
+defineOptions({ name: 'RButton' })
+import { computed } from 'vue'
+const ButtonSize = ['small', 'default', 'large'] as const
+const ButtonType = ['primary', 'success', 'warning', 'error', 'info', 'default'] as const
+type Size = typeof ButtonSize[number]
+type Type = typeof ButtonType[number]
+interface PropsType {
+  size?: Size
+  type?: Type
 }
-</style>
+const props = withDefaults(defineProps<PropsType>(), {
+  size: 'default',
+  type: 'default',
+})
+const className = computed(() => {
+  const className = ['r-button']
+  if (ButtonSize.includes(props.size)) className.push(`r-button--${props.size}`)
+  if (ButtonType.includes(props.type)) className.push(`r-button--${props.type}`)
+  return className
+})
+</script>
