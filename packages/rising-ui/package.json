@@ -21,6 +21,7 @@
             "import": "./es/index.mjs"
         }
     },
+    "style": "theme-chalk/index.css",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Leovenn/rising-ui.git"
@@ -30,7 +31,7 @@
     },
     "homepage": "https://leovenn.github.io/rising-ui-docs",
     "peerDependencies": {
-        "vue": "^3.2.37"
+        "vue": "^3.2.0"
     },
     "browserslist": [
         "> 1%",

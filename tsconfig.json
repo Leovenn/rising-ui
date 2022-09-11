@@ -7,17 +7,19 @@
       "unplugin-vue-macros/macros-global"
     ],
     "paths": {},
-    "baseUrl": "."
+    "baseUrl": ".",
   },
   "include": [
     "packages/**/*.ts",
     "packages/**/*.vue",
     "vite.config.ts",
-    "typings/*.d.ts"
+    "typings/*.d.ts",
+    "play/**/*.ts",
+    "play/**/*.vue",
   ],
   "exclude": [
     "node_modules",
-    "./dist"
+    "dist"
   ],
 }
 // {
