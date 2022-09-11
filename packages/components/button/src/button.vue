@@ -4,10 +4,10 @@
   </button>
 </template>
 <script setup lang="ts">
-defineOptions({ name: 'RButton' })
+// defineOptions({ name: 'RButton' })
 import { computed } from 'vue'
-const ButtonSize = ['small', 'default', 'large'] as const
-const ButtonType = ['primary', 'success', 'warning', 'error', 'info', 'default'] as const
+const ButtonSize = ['small', 'large', ''] as const
+const ButtonType = ['primary', 'success', 'warning', 'error', 'info', ''] as const
 type Size = typeof ButtonSize[number]
 type Type = typeof ButtonType[number]
 interface PropsType {
@@ -15,8 +15,8 @@ interface PropsType {
   type?: Type
 }
 const props = withDefaults(defineProps<PropsType>(), {
-  size: 'default',
-  type: 'default',
+  size: '',
+  type: '',
 })
 const className = computed(() => {
   const className = ['r-button']

@@ -6,6 +6,12 @@
   border: 1px solid #ccc;
   white-space: nowrap;
   border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  &:active {
+    top: 1px;
+  }
 }
 .@{prefix}-button--primary {
   background-color: var(--r-primary-bg-color);
@@ -37,6 +43,7 @@
   padding: 2px 8px;
   font-size: 12px;
 }
+
 .@{prefix}-button--large {
   padding: 8px 13px;
   font-size: 16px;
