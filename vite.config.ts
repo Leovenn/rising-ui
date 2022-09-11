@@ -35,6 +35,7 @@ export default defineConfig((configEnv) => {
             content,
           }
         },
+        exclude: ['play/**/*.ts', 'play/**/*.vue'],
         // staticImport: true,
       }),
       dts({
@@ -46,6 +47,7 @@ export default defineConfig((configEnv) => {
             content,
           }
         },
+        exclude: ['play/**/*.ts', 'play/**/*.vue'],
       }),
       VueMacros(),
     ],
