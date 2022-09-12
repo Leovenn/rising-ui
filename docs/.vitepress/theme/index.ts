@@ -2,7 +2,7 @@
 
 import DefaultTheme from 'vitepress/theme'
 import { RButton } from '@rising-ui/rising-ui'
-import '@rising-ui/components/button/style'
+import '@rising-ui/theme-chalk/src/index.less'
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app, router, siteData, isServer }) => {

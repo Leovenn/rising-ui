@@ -2,7 +2,11 @@
 
 ## 环境支持
 
-RisingUI
+由于 Vue 3 不再支持 RisingUI 也不再支持 IE 浏览器。
+
+<div>
+    
+</div>
 
 ## 版本
 
