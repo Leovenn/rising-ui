@@ -1,6 +1,6 @@
 {
     "name": "@rising-ui/rising-ui",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "一个简约的vue3组件库",
     "main": "index.ts",
     "module": "index.ts",
@@ -19,7 +19,8 @@
         ".": {
             "require": "./lib/index.cjs",
             "import": "./es/index.mjs"
-        }
+        },
+        "./*": "./*"
     },
     "style": "theme-chalk/index.css",
     "repository": {

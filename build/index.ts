@@ -33,7 +33,14 @@ export const unpackRising = async () => {
  * 拷贝 package.json 并修改 拷贝md  拷贝样式源码文件 移除dist/assets 目录
  */
 export const copyPkgAndMd = async () => {
-  await writeJson(`${proPath}/package.json`, { ...readJsonSync(`${sourcePath}/rising-ui/package.json`), name: 'rising-ui', main: 'lib/index.cjs', module: 'es/index.mjs', type: 'module' })
+  await writeJson(`${proPath}/package.json`, {
+    ...readJsonSync(`${sourcePath}/rising-ui/package.json`),
+    name: 'rising-ui',
+    main: 'lib/rising-ui/index.cjs',
+    module: 'es/rising-ui/index.mjs',
+    types: 'es/rising-ui/index.d.ts',
+    type: 'module',
+  })
   await copy(`${rootPath}/README.md`, `${proPath}/README.md`)
   await copy(`${sourcePath}/theme-chalk/src`, `${proPath}/theme-chalk/src`)
   await remove(`${proPath}/assets`)

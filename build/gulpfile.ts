@@ -6,7 +6,7 @@ export default series(
   () => removeDist(),
   () => buildComponents(),
   parallel(
-    () => unpackRising(),
+    // () => unpackRising(),
     () => copyPkgAndMd(),
     () => buildStyle()
   )
