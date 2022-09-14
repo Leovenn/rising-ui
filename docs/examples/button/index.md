@@ -4,10 +4,11 @@ import ButtonBase from '../../src/button/ButtonBase.vue'
 
 # 按钮
 
-<!-- :::demo button/ButtonBase
-::: -->
+:::demo button/ButtonBase
+<button-base />
+
+:::
 
 <!-- <ButtonBase></ButtonBase> -->
-<button-base />
 
 ## 基础用法

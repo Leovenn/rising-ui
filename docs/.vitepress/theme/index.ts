@@ -3,6 +3,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { RButton } from '@rising-ui/rising-ui'
 import '@rising-ui/theme-chalk/src/index.less'
+import Demo from '../test.vue'
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app, router, siteData, isServer }) => {
@@ -16,5 +17,6 @@ export default {
     // console.log(RButton)
     // app.use('RButton', RButton)
     app.component('RButton', RButton)
+    app.component('Demo', Demo)
   },
 }
