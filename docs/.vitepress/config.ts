@@ -1,10 +1,15 @@
+import { markdownConfig } from './plugins/markdown-plugin'
 import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Rising UI',
   // description: 'hello world',
   // base: '/rising-ui-docs',
+  // base: '/rising-ui',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo_head.svg' }]],
   // lastUpdated: true,
+  markdown: {
+    config: markdownConfig,
+  },
   themeConfig: {
     siteTitle: 'Rising UI',
     logo: '/logo_head.svg',

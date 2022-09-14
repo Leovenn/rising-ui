@@ -23,7 +23,7 @@
     "@rising-ui/components": "workspace:^1.0.0",
     "@rising-ui/constants": "workspace:^1.0.0",
     "@rising-ui/play": "workspace:^0.0.0",
-    "@rising-ui/rising-ui": "workspace:^0.0.4",
+    "@rising-ui/rising-ui": "*",
     "@rising-ui/theme-chalk": "workspace:^1.0.0",
     "@rising-ui/utils": "workspace:^1.0.0"
   },
@@ -47,5 +47,12 @@
     "vue": "^3.2.37",
     "vue-tsc": "^0.38.4"
   },
-  "type": "module"
+  "type": "module",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  }
 }
