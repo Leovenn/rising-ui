@@ -27,7 +27,8 @@ const sourceHtml = computed(() => decodeURIComponent(props.source))
 <style scoped lang="less">
 .example {
   border: 1px solid #ccc;
-  .component {
+  .example_source {
+    background-color: #ccc;
   }
 }
 </style>

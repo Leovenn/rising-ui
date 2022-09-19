@@ -5,10 +5,9 @@ import ButtonBase from '../../src/button/ButtonBase.vue'
 # 按钮
 
 :::demo button/ButtonBase
+
 <button-base />
 
 :::
-
-<!-- <ButtonBase></ButtonBase> -->
 
 ## 基础用法

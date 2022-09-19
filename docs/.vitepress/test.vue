@@ -1,24 +1,34 @@
 <template>
-  <div class="example_box">
-    <!-- 123 -->
-    <div class="component">
-      <slot></slot>
+  <ClientOnly>
+    <div class="example_box">
+      <!-- 123 -->
+      <div class="component">
+        <slot></slot>
+      </div>
+
+      <div class="operation">
+        <!-- <div v-html="sourceHtml"></div> -->
+        <!-- <button>复制代码</button>
+      <button>查看源代码</button> -->
+        <div class="copy">
+          <svg viewBox="0 0 16 16">
+            <path
+              fill="currentColor"
+              d="M4 4.085V10.5a2.5 2.5 0 0 0 2.336 2.495L6.5 13h4.414A1.5 1.5 0 0 1 9.5 14H6a3 3 0 0 1-3-3V5.5a1.5 1.5 0 0 1 1-1.415ZM11.5 2A1.5 1.5 0 0 1 13 3.5v7a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 5 10.5v-7A1.5 1.5 0 0 1 6.5 2h5Zm0 1h-5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5Z"
+            />
+          </svg>
+        </div>
+
+        <div class="fold">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M18.17 12L15 8.83l1.41-1.42L21 12l-4.59 4.58L15 15.17L18.17 12M5.83 12L9 15.17l-1.41 1.42L3 12l4.59-4.58L9 8.83L5.83 12Z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="example_source" v-html="decodeURIComponent(props.source)"></div>
     </div>
-
-    <div class="operation">
-      <!-- <div v-html="sourceHtml"></div> -->
-      <button>复制代码</button>
-      <button>查看源代码</button>
-
-      <svg width="32" height="32" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M19.53 8L14 2.47a.75.75 0 0 0-.53-.22H11A2.75 2.75 0 0 0 8.25 5v1.25H7A2.75 2.75 0 0 0 4.25 9v10A2.75 2.75 0 0 0 7 21.75h7A2.75 2.75 0 0 0 16.75 19v-1.25H17A2.75 2.75 0 0 0 19.75 15V8.5a.75.75 0 0 0-.22-.5Zm-5.28-3.19l2.94 2.94h-2.94Zm1 14.19A1.25 1.25 0 0 1 14 20.25H7A1.25 1.25 0 0 1 5.75 19V9A1.25 1.25 0 0 1 7 7.75h1.25V15A2.75 2.75 0 0 0 11 17.75h4.25ZM17 16.25h-6A1.25 1.25 0 0 1 9.75 15V5A1.25 1.25 0 0 1 11 3.75h1.75V8.5a.76.76 0 0 0 .75.75h4.75V15A1.25 1.25 0 0 1 17 16.25Z"
-        />
-      </svg>
-    </div>
-  </div>
-
+  </ClientOnly>
   <!-- <div v-html="decodeURIComponent(props.source)"></div> -->
 </template>
 
@@ -30,7 +40,7 @@ const props = defineProps<{
   rawSource: string
 }>()
 
-const sourceHtml = computed(() => decodeURIComponent(props.source))
+const sourceHtml = computed(() => decodeURIComponent(rawSource.source))
 </script>
 
 <style scoped lang="less">
@@ -45,6 +55,28 @@ const sourceHtml = computed(() => decodeURIComponent(props.source))
     padding: 10px;
   }
   .operation {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    cursor: pointer;
+    > div {
+      color: rgb(170, 167, 167);
+      font-size: 16px;
+      margin-left: 10px;
+      transition: all 0.3s;
+      > svg {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      &:hover {
+        color: #356ad2;
+      }
+    }
+  }
+  .example_source {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: rgba(#d3d8e2, 0.1);
   }
 }
 </style>
