@@ -1,15 +1,10 @@
 <template>
   <div class="example_box">
-    <!-- 123 -->
     <div class="component">
       <slot></slot>
     </div>
-
     <div class="operation">
-      <!-- <div v-html="sourceHtml"></div> -->
-      <!-- <button>复制代码</button>
-      <button>查看源代码</button> -->
-      <div class="copy">
+      <div class="copy" @click="copy">
         <svg viewBox="0 0 16 16">
           <path
             fill="currentColor"
@@ -18,25 +13,31 @@
         </svg>
       </div>
 
-      <div class="fold">
+      <div class="fold" @click="toggle">
         <svg viewBox="0 0 24 24">
           <path fill="currentColor" d="M18.17 12L15 8.83l1.41-1.42L21 12l-4.59 4.58L15 15.17L18.17 12M5.83 12L9 15.17l-1.41 1.42L3 12l4.59-4.58L9 8.83L5.83 12Z" />
         </svg>
       </div>
     </div>
-
-    <div class="example_source" v-html="sourceHtml"></div>
+    <div class="example_source" v-html="sourceHtml" v-show="state.showPanel"></div>
   </div>
-  <!-- <div v-html="decodeURIComponent(props.source)"></div> -->
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
+import { computed, reactive } from 'vue'
+import { createPopper } from '@popperjs/core'
+const state = reactive({ showPanel: false })
+const toggle = () => (state.showPanel = !state.showPanel)
 const props = defineProps<{
   source: string
   rawSource: string
 }>()
+
+const copy = () => {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(decodeURIComponent(props.rawSource))
+  }
+}
 
 const sourceHtml = computed(() => decodeURIComponent(props.source))
 </script>
@@ -48,6 +49,7 @@ const sourceHtml = computed(() => decodeURIComponent(props.source))
   box-sizing: border-box;
   // padding: 10px;
   margin: 10px 0;
+
   .component {
     border-bottom: 1px solid #ccc;
     padding: 10px;
@@ -76,6 +78,8 @@ const sourceHtml = computed(() => decodeURIComponent(props.source))
     border-top: 1px solid #ccc;
     // background-color: rgba(#d3d8e2, 0.1);
     background-color: #fffbe8;
+    overflow: hidden;
+    overflow-x: auto;
   }
 }
 </style>

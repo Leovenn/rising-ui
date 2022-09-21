@@ -13,5 +13,8 @@
     "prismjs": "^1.29.0",
     "vitepress": "^1.0.0-alpha.9",
     "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6"
   }
 }

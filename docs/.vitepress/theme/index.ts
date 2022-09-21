@@ -3,7 +3,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { RButton } from '@rising-ui/rising-ui'
 import '@rising-ui/theme-chalk/src/index.less'
-import Demo from '../test.vue'
+import Demo from '../../base/Demo.vue'
 import 'prismjs/themes/prism-solarizedlight.min.css'
 export default {
   ...DefaultTheme,
