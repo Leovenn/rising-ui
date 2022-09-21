@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import { RButton } from '@rising-ui/rising-ui'
 import '@rising-ui/theme-chalk/src/index.less'
 import Demo from '../test.vue'
+import 'prismjs/themes/prism-solarizedlight.min.css'
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app, router, siteData, isServer }) => {
