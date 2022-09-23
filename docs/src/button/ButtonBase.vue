@@ -11,4 +11,10 @@
 
 <script setup lang="ts"></script>
 
-<style lang="less"></style>
+<style lang="less">
+.example {
+  button {
+    margin-right: 10px;
+  }
+}
+</style>
