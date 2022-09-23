@@ -6,7 +6,7 @@ export default defineConfig({
   // base: '/rising-ui-docs',
   // base: '/rising-ui',
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo_head.svg' }]],
-  // lastUpdated: true,
+  lastUpdated: true,
   markdown: {
     config: markdownConfig,
   },
@@ -30,7 +30,7 @@ export default defineConfig({
             },
             {
               text: '快速开始',
-              link: '/guild/quickstart',
+              link: '/guide/quickstart',
             },
           ],
         },
@@ -38,8 +38,16 @@ export default defineConfig({
           text: '进阶',
           items: [
             {
-              text: 'xx',
-              link: '/xx',
+              text: '国际化',
+              link: '/guide/internationalization',
+            },
+            {
+              text: '主题',
+              link: '/guide/theme',
+            },
+            {
+              text: '暗黑模式',
+              link: '/guide/dark',
             },
           ],
         },
