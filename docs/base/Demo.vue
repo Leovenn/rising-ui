@@ -77,7 +77,8 @@ const sourceHtml = computed(() => decodeURIComponent(props.source))
     padding: 10px;
     border-top: 1px solid #ccc;
     // background-color: rgba(#d3d8e2, 0.1);
-    background-color: #fffbe8;
+    color: #a6accd;
+    background-color: var(--vp-code-block-bg);
     overflow: hidden;
     overflow-x: auto;
   }

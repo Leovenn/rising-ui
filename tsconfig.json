@@ -16,6 +16,7 @@
     "typings/*.d.ts",
     "play/**/*.ts",
     "play/**/*.vue",
+    // "docs/.vitepress/**/*.ts"
   ],
   "exclude": [
     "node_modules",
